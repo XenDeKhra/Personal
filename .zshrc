@@ -15,7 +15,7 @@ zle-keymap-select() {
 zle-line-init() {
 	RPROMPT=""
 	# Set the keymap to command mode and set the right prompt to cmd
-	zle -K vicmd && RPOMPT="[CMD]"
+	zle -K vicmd && RPROMPT="[CMD]"
 	zle reset-prompt
 }
 # Exporting Advanced Terminal Prompt widgets
@@ -68,11 +68,11 @@ case $TERM in
     } 
     preexec () { print -Pn "\e]0;[%n@%M][%~]%# ($1)\a" }
     ;;
-  screen|screen-256color)
+  screen|screen-255color)
     precmd () { 
       print -Pn "\e]83;title \"$1\"\a" 
       print -Pn "\e]0;$TERM - (%L) [%n@%M]%# [%~]\a" 
-	  RPOMPT=""
+	  RPROMPT=""
     }
     preexec () { 
       print -Pn "\e]83;title \"$1\"\a" 
