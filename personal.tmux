@@ -57,3 +57,4 @@ tmux set -g visual-activity on
 tmux setw -g mode-keys vi
 # fix ssh agent when tmux is detached
 tmux setenv -g SSH_AUTH_SOCK $HOME/.ssh/ssh_auth_sock
+tmux set -g update-environment -r
