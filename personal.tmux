@@ -56,5 +56,5 @@ tmux set -g visual-activity on
 # Setting VI keybindings for moving around in C-a [ mode
 tmux setw -g mode-keys vi
 # fix ssh agent when tmux is detached
-tmux setenv -g SSH_AUTH_SOCK $HOME/.ssh/ssh_auth_sock
+tmux setenv -g SSH_AUTH_SOCK $HOME/.ssh/ssh_auth_sock.$HOSTNAME
 tmux set -g update-environment -r
