@@ -28,7 +28,7 @@ tmux set -g mouse-select-pane on
 tmux set -g mouse-resize-pane on
 tmux set -g mouse-select-window on
 # Setting the terminal type to screen 256 colors
-tmux set -g default-terminal "screen-256color"
+tmux set -g default-terminal "xterm-256color"
 # Setting the bar details
 tmux set -g status-fg green
 tmux set -g status-bg black
