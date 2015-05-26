@@ -55,3 +55,5 @@ tmux setw -g monitor-activity on
 tmux set -g visual-activity on
 # Setting VI keybindings for moving around in C-a [ mode
 tmux setw -g mode-keys vi
+# fix ssh agent when tmux is detached
+tmux setenv -g SSH_AUTH_SOCK $HOME/.ssh/ssh_auth_sock
