@@ -30,21 +30,6 @@ tmux set -g mouse-select-window on
 # Setting the terminal type to screen 256 colors
 tmux set -g default-terminal "xterm-256color"
 # Setting the bar details
-tmux set -g status-fg green
-tmux set -g status-bg black
-tmux setw -g window-status-fg cyan
-tmux setw -g window-status-bg default
-tmux setw -g window-status-attr dim
-tmux setw -g window-status-current-fg white
-tmux setw -g window-status-current-bg red
-tmux setw -g window-status-current-attr bright
-tmux set -g pane-border-fg green
-tmux set -g pane-border-bg black
-tmux set -g pane-active-border-fg white
-tmux set -g pane-active-border-bg yellow
-tmux set -g message-fg white
-tmux set -g message-bg black
-tmux set -g message-attr bright
 tmux set -g status-left-length 40
 tmux set -g status-left "#[fg=green]Session: #S #[fg=yellow]#I #[fg=cyan]#P"
 tmux set -g status-right "#[fg=cyan]CPU: #{cpu_icon} #{cpu_percentage} | %e-%m-%y %R"
@@ -58,3 +43,37 @@ tmux setw -g mode-keys vi
 # fix ssh agent when tmux is detached
 tmux setenv -g SSH_AUTH_SOCK $HOME/.ssh/ssh_auth_sock.$HOSTNAME
 tmux set -g update-environment -r
+
+# Change themeing to solarized
+
+#### COLOUR (Solarized dark)
+
+# default statusbar colors
+tmux set-option -g status-bg black #base02
+tmux set-option -g status-fg yellow #yellow
+tmux set-option -g status-attr default
+
+# default window title colors
+tmux set-window-option -g window-status-fg brightblue #base0
+tmux set-window-option -g window-status-bg default
+tmux set-window-option -g window-status-attr dim
+
+# active window title colors
+tmux set-window-option -g window-status-current-fg brightred #orange
+tmux set-window-option -g window-status-current-bg default
+tmux set-window-option -g window-status-current-attr bright
+
+# pane border
+tmux set-option -g pane-border-fg black #base02
+tmux set-option -g pane-active-border-fg brightgreen #base01
+
+# message text
+tmux set-option -g message-bg black #base02
+tmux set-option -g message-fg brightred #orange
+
+# pane number display
+tmux set-option -g display-panes-active-colour blue #blue
+tmux set-option -g display-panes-colour brightred #orange
+
+# clock
+tmux set-window-option -g clock-mode-colour green #green
