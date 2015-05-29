@@ -10,7 +10,7 @@ tmux setw -g pane-base-index 1
 # Binding r to Reload the tmux configs
 tmux bind r source-file ~/.tmux.conf \; display "Reloaded!"
 # Changing keybindings for terminal splitting
-tmux bind | split-window -h
+tmux bind '|' split-window -h
 tmux bind - split-window -v
 # Changing keybindings for moving to VI standard
 tmux bind h select-pane -L
