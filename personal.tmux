@@ -32,7 +32,7 @@ tmux set -g default-terminal "xterm-256color"
 # Setting the bar details
 tmux set -g status-left-length 40
 tmux set -g status-left "#[fg=green]Session: #S #[fg=yellow]#I #[fg=cyan]#P"
-tmux set -g status-right "#[fg=cyan]CPU: #{cpu_icon} #{cpu_percentage} | %e-%m-%y %R"
+tmux set -g status-right "#[fg=cyan]CPU: #{cpu_icon} #{cpu_percentage} | %d-%m-%y %R"
 tmux set -g status-utf8 on
 tmux set -g status-interval 60
 tmux set -g status-justify centre
