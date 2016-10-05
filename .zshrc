@@ -84,5 +84,18 @@ case $TERM in
     ;; 
 esac
 
+# Setting configs to pull tmux variables for ssh agent
+if [ -n "$TMUX" ]; then
+  function refresh {
+    export $(tmux show-environment | grep "^SSH_AUTH_SOCK")
+  }
+else
+  function refresh { }
+fi
+
+function preexec {
+  refresh
+}
+
 # Aliases
 . ~/.alias
